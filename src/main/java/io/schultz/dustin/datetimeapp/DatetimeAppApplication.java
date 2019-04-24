@@ -1,7 +1,6 @@
 package io.schultz.dustin.datetimeapp;
 
-import javax.inject.Inject;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -18,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class DatetimeAppApplication {
 
-	@Inject
+	@Autowired
 	private DatetimeService datetimeService;
 	
 	public static void main(String[] args) {

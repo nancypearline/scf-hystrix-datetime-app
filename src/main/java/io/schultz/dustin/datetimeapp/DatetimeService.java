@@ -1,7 +1,6 @@
 package io.schultz.dustin.datetimeapp;
 
-import javax.inject.Inject;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -10,7 +9,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @Service
 public class DatetimeService {
 	
-	@Inject
+	@Autowired
 	private RestTemplate restTemplate;
 
 	@HystrixCommand(fallbackMethod="unknown")
